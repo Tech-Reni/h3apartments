@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <!-- Primary Meta Tags -->
+    <title>H3 Apartments — Premium Shortlet Apartments in Nigeria</title>
+    <meta name="title" content="H3 Apartments — Premium Shortlet Apartments in Nigeria">
+    <meta name="description"
+        content="Book luxury shortlet apartments in Lagos, Abuja, and across Nigeria with H3 Apartments. Affordable pricing, modern amenities, and seamless booking experience.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.h3apartments.com/">
+    <meta property="og:title" content="H3 Apartments — Premium Shortlet Apartments in Nigeria">
+    <meta property="og:description"
+        content="Discover modern shortlet apartments with H3 Apartments. Flexible stays, great locations, and premium amenities tailored for you.">
+    <meta property="og:image" content="https://www.h3apartments.com/img/preview.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.h3apartments.com/">
+    <meta name="twitter:title" content="H3 Apartments — Premium Shortlet Apartments in Nigeria">
+    <meta name="twitter:description"
+        content="Book luxury shortlet apartments in Nigeria with H3 Apartments. Affordable, flexible, and stylish stays.">
+    <meta name="twitter:image" content="https://www.h3apartments.com/img/preview.jpg">
+
+    <!-- Extra SEO -->
+    <meta name="keywords"
+        content="shortlet, apartments, h3 apartments, short stay, lagos shortlet, abuja apartments, nigeria rentals, serviced apartments">
+    <meta name="author" content="H3 Apartments">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/jpg">
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="img/logo.png">
+
+    <!-- SWIPER (Reviews slider) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <style>
+        /* Reviews (transparent cards) */
+        .reviews-section {
+            padding: 40px 20px;
+            position: relative;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            z-index: 3;
+        }
+
+        .swiper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+
+        .review-card {
+            width: 320px;
+            min-height: 160px;
+            backdrop-filter: blur(6px);
+            background: rgba(255, 255, 255, 0.08);
+            /* transparent */
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            padding: 18px;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .review-name {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .review-text {
+            font-size: 0.92rem;
+            line-height: 1.4;
+            color: black;
+            margin-top: 4px;
+        }
+
+        .review-meta {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: black;
+        }
+
+        /* make stars */
+        .stars {
+            letter-spacing: 2px;
+            color: #ffd166;
+        }
+
+        @media (max-width: 768px) {
+            .reviews-section {
+                margin-top: 40px;
+                padding: 20px 8px;
+            }
+
+            .review-card {
+                width: 90%;
+                min-height: 140px;
+            }
+        }
+    </style>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+</head>
+
+
+<body>
+
+    <!-- DESKTOP NAVIGATION BAR -->
+    <div class="desktop-navbar">
+        <div class="desk-nav-item">
+            <a href="#">Home</a>
+        </div>
+        <div class="desk-nav-item">
+            <a href="#">Shortlets</a>
+        </div>
+        <div class="desk-nav-item-img">
+            <img src="img/logo.png" alt="logo">
+        </div>
+        <div class="desk-nav-item">
+            <a href="#">Reviews</a>
+        </div>
+        <div class="desk-nav-item">
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="desk-nav-item" id="menu-btn" onclick="showOverlay()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
+                <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <img src="img/logo.png" alt="H3 Apartments Logo" style="width:48px; height:48px; border-radius:6px;">
+                <h3>H3 Apartments</h3>
+            </div>
+            <button class="close-btn" id="close-btn">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li><a href="#"><i class="ri-home-4-line"></i> Home</a></li>
+            <li><a href="#shortletModal"><i class="ri-user-star-line"></i> Shortlets</a></li>
+            <li><a href="https://wa.me/+2349132067777"><i class="ri-message-line"></i> Reviews</a></li>
+            <li><a href="https://wa.me/+2349132067777"><i class="ri-customer-service-2-line"></i> Contact Us</a></li>
+        </ul>
+    </div>
+
+
+    <!-- ADD SCROLL REVEAL FOR ALMOST ALL HTML ELEMENTS -->
+
+
+    <!-- FIRST SECTION -->
+    <section class="first-sect">
+        <div class="article">
+            <p>Where modern living meets comfort — H3 Apartments</p>
+            <a href="https://wa.me/+2349132067777" target="_blank">
+                <button class="contact-btn">
+                    <!-- <i class="ri-whatsapp-line"></i> -->
+                    <code>Book Now</code>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <br><br>
+
+    <section class="shortlets-section">
+        <h2>Available Shortlets</h2>
+        <div id="shortlets-container"></div>
+    </section>
+
+    <!-- Modal -->
+    <div id="shortletModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <br>
+            <h2 id="modalTitle">Shortlet Preview</h2>
+            <br>
+            <!-- Image Slider -->
+            <div class="slider">
+                <div class="slides" id="modalSlides"></div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+
+            <div class="amenities">
+                <h3>Amenities</h3>
+                <ul id="modalAmenities"></ul>
+            </div>
+
+            <!-- Rent Now Button -->
+            <div class="rent-now">
+                <a id="rentBtn" target="_blank">Rent Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- THE ABOUT ME SECTION  -->
+    <p class="meet-the-ceo" id="CEO">About Us</p>
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-img"></div>
+            <div class="right">
+                <div class="content">
+                    <h1>H3 Apartments</h1>
+                    <p>
+                        At H3 Apartments, we believe your stay should be more than just accommodation — it should be an experience. Our apartments are thoughtfully furnished, secure, and designed for total comfort. From weekend getaways to long business trips, we provide a peaceful space where you can relax, work, and feel truly at home.
+                    </p>
+                    <a href="#" class="btn">Follow US</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section (Swiper) -->
+    <section class="reviews-section" aria-label="Customer reviews">
+        <div class="swiper reviews-swiper">
+            <div class="swiper-wrapper" id="reviews-wrapper">
+                <!-- Slides will be injected by JS (6 reviews) -->
+            </div>
+            <br><br><br><br><br>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Logo & About -->
+            <div class="footer-brand">
+                <img src="img/logo.png" alt="H3 Apartments Logo" class="footer-logo">
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="ri-phone-line"></i> Manager : <a href="tel:08165618123">0816 561 8123</a></p>
+                <p><i class="ri-phone-line"></i> <a href="tel:08173403801">0817 340 3801</a></p>
+                <p><i class="ri-mail-line"></i> <a
+                        href="mailto:residence22shortlet@gmail.com">residence22shortlet@gmail.com</a></p>
+                <p><i class="ri-whatsapp-line"></i> <a href="https://wa.me/+2348165618123" target="_blank">Chat on
+                        WhatsApp</a></p>
+            </div>
+
+            <!-- Socials -->
+            <div class="footer-socials">
+                <h4>Follow Us</h4>
+                <p><i class="ri-tiktok-fill"></i> <a href="https://tiktok.com/@h3apartments"
+                        target="_blank">@h3apartments</a></p>
+                <p><i class="ri-instagram-line"></i> <a href="https://instagram.com/h3apartments"
+                        target="_blank">h3apartments</a></p>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#shortlets"><i class="ri-home-4-line"></i> Shortlets</a></li>
+                    <li><a href="#about"><i class="ri-information-line"></i> About Us</a></li>
+                    <li><a href="#contact"><i class="ri-contacts-book-2-line"></i> Contact</a></li>
+                    <li><a href="#faq"><i class="ri-question-line"></i> FAQs</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p style="justify-content: center;">© 2025 H3 Apartments. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            // Collect form values
+            const name = document.getElementById("Name").value;
+            const phoneNo = document.getElementById("phoneNo").value;
+            const checkin = document.getElementById("checkin").value;
+            const nights = document.getElementById("nights").value;
+            const rooms = document.getElementById("rooms").value;
+
+            // Construct WhatsApp message
+            const message = `Hello, my name is ${name}. I would like to book a shortlet. 📞 Phone: ${phoneNo} 📅 Check-in: ${checkin || "Not specified"} 🌙 Nights: ${nights}  🏠 Rooms: ${rooms}`;
+
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // Replace with YOUR WhatsApp number (include country code, without + or spaces)
+            const whatsappNumber = "+2348165618123"; // Example: Nigeria number
+
+            // Redirect to WhatsApp
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            window.open(whatsappURL, "_blank");
+        });
+    </script>
+
+    <script>
+        // NAVBAR: sync hero image with navbar & switch to black when scrolled >=50
+        (function () {
+            const navbar = document.querySelector('.desktop-navbar');
+            if (!navbar) return;
+            window.addEventListener('scroll', () => {
+                if (window.scrollY >= 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            // initialize state on load
+            if (window.scrollY >= 50) navbar.classList.add('scrolled');
+        })();
+
+        // REVIEWS: sample data (6 reviews)
+        const reviews = [
+            { name: 'Amaka', rating: 5, text: 'Amazing stay! The apartment was spotless and in a fantastic location.' },
+            { name: 'Daniel', rating: 5, text: 'Comfortable bed, fast WiFi, and great communication. Will book again.' },
+            { name: 'Chioma', rating: 4, text: 'Lovely space and helpful staff. Minor issue resolved quickly.' },
+            { name: 'Emeka', rating: 5, text: 'Perfect for business trips. Quiet and well-furnished.' },
+            { name: 'Fatima', rating: 5, text: 'Stylish decor and great amenities. Highly recommend H3 Apartments.' },
+            { name: 'Bayo', rating: 4, text: 'Excellent value for money. Will return next month.' }
+        ];
+
+        // Build star string from rating
+        function renderStars(n) {
+            let s = '';
+            for (let i = 0; i < 5; i++) {
+                s += i < n ? '★' : '☆';
+            }
+            return `<span class="stars">${s}</span>`;
+        }
+
+        // insert slides into DOM
+        (function populateReviews() {
+            const wrapper = document.getElementById('reviews-wrapper');
+            if (!wrapper) return;
+            reviews.forEach(r => {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `
+        <article class="review-card" role="article" aria-label="Review by ${r.name}">
+          <div class="review-top" style="display:flex; align-items:center; gap:12px;">
+            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#f2a635,#f7d48b);display:flex;align-items:center;justify-content:center;font-weight:700;color:#111;">
+              ${r.name.charAt(0).toUpperCase()}
+            </div>
+            <div>
+              <div class="review-name">${r.name}</div>
+              <div style="font-size:0.82rem;color: rgba(255,255,255,0.85)">${renderStars(r.rating)}</div>
+            </div>
+          </div>
+          <div class="review-text">${r.text}</div>
+          <div class="review-meta">
+            <div>Verified Guest</div>
+            <div style="font-size:0.78rem; opacity:0.9;">H3 Apartments</div>
+          </div>
+        </article>
+      `;
+                wrapper.appendChild(slide);
+            });
+        })();
+
+        // Initialize Swiper after DOM content loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // eslint-disable-next-line no-undef
+            const swiper = new Swiper('.reviews-swiper', {
+                slidesPerView: 3,
+                spaceBetween: 24,
+                loop: true,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                breakpoints: {
+                    0: { slidesPerView: 1 },
+                    640: { slidesPerView: 1.2 },
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 }
+                }
+            });
+        });
+    </script>
+
+    <script src="js/shortlets.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
