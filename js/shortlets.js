@@ -2,7 +2,7 @@ const shortletsData = {
     "listings": [
         {
             "id": "h3-downtown",
-            "title": "DOWN TOWN SUITE",
+            "title": "DOWN TOWN STUDIO",
             "price": "₦150,000 / Night",
             "rooms": "1 Bedroom",
             "location": "Onike Iwaya, Lagos",

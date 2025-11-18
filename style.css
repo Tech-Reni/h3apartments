@@ -28,7 +28,10 @@ body {
   position: sticky;
   top: 0;
   justify-content: space-around;
-  background: rgb(0, 0, 0);
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   z-index: 5;
 }
 
@@ -109,14 +112,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: var(--root-clr);
-  color: #fff;
+  background-color: white;
   clip-path: ellipse(100% 55% at 48% 44%);
-}
-
-.sidebar-header h3 {
-  margin: 0;
-  font-size: 1.2rem;
 }
 
 .close-btn {

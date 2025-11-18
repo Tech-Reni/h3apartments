@@ -126,6 +126,122 @@
                 min-height: 140px;
             }
         }
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('img/hero.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            max-width: 700px;
+            animation: fadeInUp 1.2s ease;
+        }
+
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+
+        .hero-btn {
+            display: inline-block;
+            background: #ffffff;
+            padding: 14px 32px;
+            font-size: 1.1rem;
+            color: #000;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background: #d6d6d6;
+            transform: translateY(-3px);
+        }
+
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
+            .hero-btn {
+                padding: 12px 26px;
+                font-size: 1rem;
+            }
+            .about-container {
+                flex-direction: column;
+                width: 100%;
+                margin: 0 20px;
+            }
+
+            .about-img {
+                width: 100%;
+                height: 480px;
+                background-position-y: -15px;
+            }
+
+            .right {
+                width: 90%;
+                margin: 0;
+                margin-top: -100px;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .hero-content p {
+                font-size: 0.95rem;
+            }
+        }
     </style>
 
     <!-- Swiper JS -->
@@ -169,7 +285,6 @@
         <div class="sidebar-header">
             <div style="display:flex; align-items:center; gap:10px;">
                 <img src="img/logo.png" alt="H3 Apartments Logo" style="width:48px; height:48px; border-radius:6px;">
-                <h3>H3 Apartments</h3>
             </div>
             <button class="close-btn" id="close-btn">
                 <i class="ri-close-line"></i>
@@ -184,20 +299,13 @@
         </ul>
     </div>
 
-
-    <!-- ADD SCROLL REVEAL FOR ALMOST ALL HTML ELEMENTS -->
-
-
-    <!-- FIRST SECTION -->
-    <section class="first-sect">
-        <div class="article">
-            <p>Where modern living meets comfort — H3 Apartments</p>
-            <a href="https://wa.me/+2349132067777" target="_blank">
-                <button class="contact-btn">
-                    <!-- <i class="ri-whatsapp-line"></i> -->
-                    <code>Book Now</code>
-                </button>
-            </a>
+    <!-- Hero Section for H3 Apartments -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Experience Luxury & Comfort at H3 Apartments</h1>
+            <p>Your perfect shortlet stay awaits — premium, secure, and designed for modern living.</p>
+            <a href="https://wa.me/+2349132067777" target="_blank" class="hero-btn">Book Today</a>
         </div>
     </section>
 
@@ -244,7 +352,10 @@
                 <div class="content">
                     <h1>H3 Apartments</h1>
                     <p>
-                        At H3 Apartments, we believe your stay should be more than just accommodation — it should be an experience. Our apartments are thoughtfully furnished, secure, and designed for total comfort. From weekend getaways to long business trips, we provide a peaceful space where you can relax, work, and feel truly at home.
+                        At H3 Apartments, we believe your stay should be more than just accommodation — it should be an
+                        experience. Our apartments are thoughtfully furnished, secure, and designed for total comfort.
+                        From weekend getaways to long business trips, we provide a peaceful space where you can relax,
+                        work, and feel truly at home.
                     </p>
                     <a href="#" class="btn">Follow US</a>
                 </div>
@@ -313,32 +424,6 @@
             <p style="justify-content: center;">© 2025 H3 Apartments. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <script>
-        document.getElementById("search-form").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent form from refreshing the page
-
-            // Collect form values
-            const name = document.getElementById("Name").value;
-            const phoneNo = document.getElementById("phoneNo").value;
-            const checkin = document.getElementById("checkin").value;
-            const nights = document.getElementById("nights").value;
-            const rooms = document.getElementById("rooms").value;
-
-            // Construct WhatsApp message
-            const message = `Hello, my name is ${name}. I would like to book a shortlet. 📞 Phone: ${phoneNo} 📅 Check-in: ${checkin || "Not specified"} 🌙 Nights: ${nights}  🏠 Rooms: ${rooms}`;
-
-            // Encode message for URL
-            const encodedMessage = encodeURIComponent(message);
-
-            // Replace with YOUR WhatsApp number (include country code, without + or spaces)
-            const whatsappNumber = "+2348165618123"; // Example: Nigeria number
-
-            // Redirect to WhatsApp
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-            window.open(whatsappURL, "_blank");
-        });
-    </script>
 
     <script>
         // NAVBAR: sync hero image with navbar & switch to black when scrolled >=50
