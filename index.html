@@ -35,7 +35,7 @@
 
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/mobile.css">
@@ -154,7 +154,6 @@
             color: #fff;
             padding: 20px;
             max-width: 700px;
-            animation: fadeInUp 1.2s ease;
         }
 
 
@@ -189,31 +188,21 @@
             transform: translateY(-3px);
         }
 
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .hero-content h1 {
                 font-size: 2.2rem;
             }
+
             .hero-content p {
                 font-size: 1rem;
             }
+
             .hero-btn {
                 padding: 12px 26px;
                 font-size: 1rem;
             }
+
             .about-container {
                 flex-direction: column;
                 width: 100%;
@@ -238,6 +227,7 @@
             .hero-content h1 {
                 font-size: 1.8rem;
             }
+
             .hero-content p {
                 font-size: 0.95rem;
             }
@@ -294,8 +284,8 @@
         <ul class="sidebar-menu">
             <li><a href="#"><i class="ri-home-4-line"></i> Home</a></li>
             <li><a href="#shortletModal"><i class="ri-user-star-line"></i> Shortlets</a></li>
-            <li><a href="https://wa.me/+2349132067777"><i class="ri-message-line"></i> Reviews</a></li>
-            <li><a href="https://wa.me/+2349132067777"><i class="ri-customer-service-2-line"></i> Contact Us</a></li>
+            <li><a href="#"><i class="ri-message-line"></i> Reviews</a></li>
+            <li><a href="https://wa.me/+2349133592689"><i class="ri-customer-service-2-line"></i> Contact Us</a></li>
         </ul>
     </div>
 
@@ -305,7 +295,7 @@
         <div class="hero-content">
             <h1>Experience Luxury & Comfort at H3 Apartments</h1>
             <p>Your perfect shortlet stay awaits — premium, secure, and designed for modern living.</p>
-            <a href="https://wa.me/+2349132067777" target="_blank" class="hero-btn">Book Today</a>
+            <a href="https://wa.me/+2349133592689" target="_blank" class="hero-btn">Book Today</a>
         </div>
     </section>
 
@@ -357,7 +347,7 @@
                         From weekend getaways to long business trips, we provide a peaceful space where you can relax,
                         work, and feel truly at home.
                     </p>
-                    <a href="#" class="btn">Follow US</a>
+                    <a href="https://instagram.com/h3apartment" class="btn">Follow US</a>
                 </div>
             </div>
         </div>
@@ -388,21 +378,19 @@
             <!-- Contact -->
             <div class="footer-contact">
                 <h4>Contact Us</h4>
-                <p><i class="ri-phone-line"></i> Manager : <a href="tel:08165618123">0816 561 8123</a></p>
-                <p><i class="ri-phone-line"></i> <a href="tel:08173403801">0817 340 3801</a></p>
-                <p><i class="ri-mail-line"></i> <a
-                        href="mailto:residence22shortlet@gmail.com">residence22shortlet@gmail.com</a></p>
-                <p><i class="ri-whatsapp-line"></i> <a href="https://wa.me/+2348165618123" target="_blank">Chat on
+                <p><i class="ri-phone-line"></i> Manager : <a href="tel:+2349133592689">+2349133592689</a></p>
+                <p><i class="ri-mail-line"></i> <a href="mailto:h3apartment3@gmail.com">h3apartment3@gmail.com</a></p>
+                <p><i class="ri-whatsapp-line"></i> <a href="https://wa.me/+2349133592689" target="_blank">Chat on
                         WhatsApp</a></p>
             </div>
 
             <!-- Socials -->
             <div class="footer-socials">
                 <h4>Follow Us</h4>
-                <p><i class="ri-tiktok-fill"></i> <a href="https://tiktok.com/@h3apartments"
-                        target="_blank">@h3apartments</a></p>
-                <p><i class="ri-instagram-line"></i> <a href="https://instagram.com/h3apartments"
-                        target="_blank">h3apartments</a></p>
+                <!-- <p><i class="ri-tiktok-fill"></i> <a href="https://tiktok.com/@h3apartments"
+                        target="_blank">@h3apartments</a></p> -->
+                <p><i class="ri-instagram-line"></i> <a href="https://instagram.com/h3apartment"
+                        target="_blank">h3apartment</a></p>
 
             </div>
 
@@ -426,20 +414,50 @@
     </footer>
 
     <script>
-        // NAVBAR: sync hero image with navbar & switch to black when scrolled >=50
-        (function () {
-            const navbar = document.querySelector('.desktop-navbar');
-            if (!navbar) return;
-            window.addEventListener('scroll', () => {
-                if (window.scrollY >= 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
-            // initialize state on load
-            if (window.scrollY >= 50) navbar.classList.add('scrolled');
-        })();
+
+        // Initialize ScrollReveal
+        const sr = ScrollReveal({
+            distance: "60px",
+            duration: 1500,
+            delay: 200,
+            easing: "ease-out",
+            reset: false  // set true if you want animations to trigger every scroll
+        });
+
+        // Hero Section
+        sr.reveal('.hero-content', {
+            origin: "bottom"
+        });
+
+        // Shortlets Header
+        sr.reveal('.shortlets-section h2', {
+            origin: "left"
+        });
+
+        // Shortlets Container
+        sr.reveal('#shortlets-container', {
+            origin: "right",
+            interval: 120
+        });
+
+        // About Section
+        sr.reveal('.about-img', {
+            origin: "left"
+        });
+        sr.reveal('.about-section .content', {
+            origin: "right"
+        });
+
+        // Reviews Section (Swiper)
+        sr.reveal('.reviews-section', {
+            origin: "bottom"
+        });
+
+        // Footer
+        sr.reveal('.footer-container', {
+            origin: "bottom",
+            interval: 150
+        });
 
         // REVIEWS: sample data (6 reviews)
         const reviews = [

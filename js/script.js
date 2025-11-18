@@ -79,6 +79,15 @@ function renderShortlets(listings) {
         `;
         section.appendChild(card);
     });
+
+    // Reveal animation for dynamic cards
+    ScrollReveal().reveal('.shortlet-card', {
+        origin: 'bottom',
+        distance: '50px',
+        duration: 1200,
+        interval: 120,
+        easing: 'ease-out'
+    });
 }
 
 // ----------------------
