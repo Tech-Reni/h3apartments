@@ -244,5 +244,58 @@ const shortletsData = {
                 "Parking Space"
             ]
         },
+        {
+            "id": "h3-lumina",
+            "title": "LUMINA SUITE",
+            "price": "₦100,000 / Night",
+            "rooms": "1 Bedroom ",
+            "location": "Onike Iwaya, Lagos",
+            "rating": "⭐ 4.9",
+            "rentMessage": "Hello, I am interested in a shortlet. Can you share more details?",
+            "images": [
+                "img/lumina/sitting-room-1.jpg",
+                "img/lumina/kitchen.jpg",
+                "img/lumina/sitting-room-2.jpg",
+                "img/lumina/bedroom-1.jpg",
+                "img/lumina/bedroom-2.jpg",
+                "img/lumina/toilet-1.jpg",
+                "img/lumina/toilet-2.jpg"
+            ],
+            "amenities": [
+                "Free WiFi",
+                "Air Conditioning",
+                "Smart TV",
+                "Kitchen",
+                "24/7 Power Supply",
+                "Parking Space"
+            ]
+        },
+        {
+            "id": "h3-fantasy",
+            "title": "FANTASY SUITE",
+            "price": "₦150,000 / Night",
+            "rooms": "2 Bedroom ",
+            "location": "Onike Iwaya, Lagos",
+            "rating": "⭐ 4.9",
+            "rentMessage": "Hello, I am interested in a shortlet. Can you share more details?",
+            "images": [
+                "img/fantasy/sitting-room-1.jpg",
+                "img/fantasy/kitchen.jpg",
+                "img/fantasy/sitting-room-2.jpg",
+                "img/fantasy/bedroom-1.jpg",
+                "img/fantasy/bedroom-2.jpg",
+                "img/fantasy/toilet-1.jpg",
+                "img/fantasy/toilet-2.jpg",
+                "img/fantasy/passage.jpg"
+            ],
+            "amenities": [
+                "Free WiFi",
+                "Air Conditioning",
+                "Smart TV",
+                "Kitchen",
+                "24/7 Power Supply",
+                "Parking Space"
+            ]
+        },
     ]
 }; 

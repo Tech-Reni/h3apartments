@@ -111,7 +111,7 @@ function openModal(shortlet) {
 
     // Rent Now button (WhatsApp prefilled message)
     const rentBtn = document.getElementById("rentBtn");
-    rentBtn.href = `https://wa.me/+2348165618123?text=${encodeURIComponent(shortlet.rentMessage)}`;
+    rentBtn.href = `https://wa.me/+2349133592689?text=${encodeURIComponent(shortlet.rentMessage)}`;
 
     // Show Modal
     document.getElementById("shortletModal").style.display = "block";
