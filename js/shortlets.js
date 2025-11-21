@@ -13,6 +13,7 @@ const shortletsData = {
                 "img/downtown/front_door.jpg",
                 "img/downtown/kitchen.jpg",
                 "img/downtown/toilet-1.jpg",
+                "img/downtown/bedroom-1.jpg"
             ],
             "amenities": [
                 "Free WiFi",
@@ -34,6 +35,7 @@ const shortletsData = {
             "images": [
                 "img/prestige/sitting-room-1.jpg",
                 "img/prestige/kitchen.jpg",
+                "img/prestige/toilet-3.jpg",
                 "img/prestige/sitting-room-2.jpg",
                 "img/prestige/bedroom-1.jpg",
                 "img/prestige/sitting-room-3.jpg",
@@ -65,7 +67,7 @@ const shortletsData = {
                 "img/elite/kitchen.jpg",
                 "img/elite/sitting-room-2.jpg",
                 "img/elite/bedroom-1.jpg",
-                "img/elite/sitting-room-3.jpg",
+                "img/elite/front_door.jpg",
                 "img/elite/bedroom-2.jpg",
                 "img/elite/toilet-1.jpg",
                 "img/elite/toilet-2.jpg"
@@ -91,6 +93,8 @@ const shortletsData = {
                 "img/imperial/sitting-room-1.jpg",
                 "img/imperial/kitchen.jpg",
                 "img/imperial/sitting-room-2.jpg",
+                "img/imperial/front_door.jpg",
+                "img/imperial/toilet-3.jpg",
                 "img/imperial/bedroom-1.jpg",
                 "img/imperial/passage.jpg",
                 "img/imperial/bedroom-2.jpg",
@@ -118,13 +122,15 @@ const shortletsData = {
             "images": [
                 "img/Metro/sitting-room-1.jpg",
                 "img/Metro/kitchen.jpg",
+                "img/Metro/passage.jpg",
                 "img/Metro/sitting-room-2.jpg",
                 "img/Metro/bedroom-1.jpg",
-                "img/Metro/passage.jpg",
+                "img/Metro/sitting-room-3.jpg",
                 "img/Metro/bedroom-2.jpg",
                 "img/Metro/toilet-1.jpg",
                 "img/Metro/toilet-2.jpg",
                 "img/Metro/bedroom-3.jpg",
+                "img/Metro/front_door.jpg",
                 "img/Metro/toilet-3.jpg"
             ],
             "amenities": [
@@ -173,11 +179,13 @@ const shortletsData = {
             "images": [
                 "img/riverstone/sitting-room-1.jpg",
                 "img/riverstone/kitchen.jpg",
+                "img/riverstone/front_door.jpg",
                 "img/riverstone/sitting-room-2.jpg",
                 "img/riverstone/bedroom-1.jpg",
                 "img/riverstone/passage.jpg",
                 "img/riverstone/bedroom-2.jpg",
                 "img/riverstone/toilet-1.jpg",
+                "img/riverstone/sitting-room-3.jpg",
                 "img/riverstone/toilet-2.jpg",
                 "img/riverstone/bedroom-3.jpg",
                 "img/riverstone/toilet-3.jpg"
@@ -202,6 +210,7 @@ const shortletsData = {
             "images": [
                 "img/royal/sitting-room-1.jpg",
                 "img/royal/kitchen.jpg",
+                "img/royal/front_door.jpg",
                 "img/royal/sitting-room-2.jpg",
                 "img/royal/bedroom-1.jpg",
                 "img/royal/bedroom-2.jpg",
@@ -228,6 +237,7 @@ const shortletsData = {
             "images": [
                 "img/terra/sitting-room-1.jpg",
                 "img/terra/kitchen.jpg",
+                "img/terra/front_door.jpg",
                 "img/terra/sitting-room-2.jpg",
                 "img/terra/bedroom-1.jpg",
                 "img/terra/bedroom-2.jpg",
@@ -255,11 +265,11 @@ const shortletsData = {
             "images": [
                 "img/lumina/sitting-room-1.jpg",
                 "img/lumina/kitchen.jpg",
+                "img/lumina/front_door.jpg",
                 "img/lumina/sitting-room-2.jpg",
                 "img/lumina/bedroom-1.jpg",
                 "img/lumina/bedroom-2.jpg",
-                "img/lumina/toilet-1.jpg",
-                "img/lumina/toilet-2.jpg"
+                "img/lumina/toilet-1.jpg"
             ],
             "amenities": [
                 "Free WiFi",
@@ -281,6 +291,7 @@ const shortletsData = {
             "images": [
                 "img/fantasy/sitting-room-1.jpg",
                 "img/fantasy/kitchen.jpg",
+                "img/fantasy/front_door.jpg",
                 "img/fantasy/sitting-room-2.jpg",
                 "img/fantasy/bedroom-1.jpg",
                 "img/fantasy/bedroom-2.jpg",
