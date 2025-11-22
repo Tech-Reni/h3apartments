@@ -228,7 +228,7 @@ const shortletsData = {
         },
         {
             "id": "h3-metro",
-            "title": "METRO SUITE",
+            "title": "TERRA SUITE",
             "price": "₦150,000 / Night",
             "rooms": "2 Bedroom ",
             "location": "Onike Iwaya, Lagos",
